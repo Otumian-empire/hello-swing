@@ -4,7 +4,7 @@ import javax.swing.JFrame;
 import java.awt.*;
 
 public class BaseUI extends JFrame {
-    public void BaseUI() {}
+    public BaseUI() {}
 
     public BaseUI(String title) {
         super.setTitle(title);

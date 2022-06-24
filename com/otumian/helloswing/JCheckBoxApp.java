@@ -21,13 +21,32 @@ public class JCheckBoxApp {
         box.addItemListener(new ItemListener() {
             @Override
             public void itemStateChanged(ItemEvent itemEvent) {
-                if (itemEvent.getStateChange() == 1) {
+                // System.out.println(box.isSelected());
+                // if (itemEvent.getStateChange() == 1) {
+                if (box.isSelected()) {
                     label.setText(text + " -> checked");
+                    /*
+                     JOptionPane.showConfirmDialog(box, text + " -> checked");
+                     JOptionPane.showConfirmDialog(box, text + " -> checked", "Check Box Response", JOptionPane.OK_OPTION);
+                    */
                 } else {
                     label.setText(text + " -> unchecked");
                 }
             }
         });
+
+        // we could use this but just on this component
+        /*box.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                if (box.isSelected()){
+                    label.setText(text + " -> selected");
+                } else {
+                    label.setText(text + " -> unselected");
+                }
+            }
+        });*/
+
 
         baseUI.add(new Component[]{label, box});
 
